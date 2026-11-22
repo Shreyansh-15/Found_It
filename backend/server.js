@@ -981,7 +981,7 @@ app.get('/api/admin/claims', authenticateToken, async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(
         `FoundIt backend running at http://localhost:${PORT}`
     );
