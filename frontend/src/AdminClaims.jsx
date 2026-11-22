@@ -10,7 +10,7 @@ function AdminClaims() {
 
         try {
             const response = await fetch(
-                'http://localhost:5000/api/admin/claims',
+                'https://found-it-y7ck.onrender.com/api/admin/claims',
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -47,7 +47,7 @@ function AdminClaims() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/claims/${claimId}/review`,
+                `https://found-it-y7ck.onrender.com/api/claims/${claimId}/review`,
                 {
                     method: 'PATCH',
                     headers: {

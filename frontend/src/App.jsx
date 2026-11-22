@@ -33,8 +33,8 @@ function App() {
 
             const url =
                 filter === 'all'
-                    ? 'http://localhost:5000/api/items'
-                    : `http://localhost:5000/api/items?report_type=${filter}`;
+                    ? 'https://found-it-y7ck.onrender.com/api/items'
+                    : `https://found-it-y7ck.onrender.com/api/items?report_type=${filter}`;
 
             const response = await fetch(url);
             const data = await response.json();
@@ -57,7 +57,7 @@ function App() {
 
         try {
             const response = await fetch(
-                'http://localhost:5000/api/auth/login',
+                'https://found-it-y7ck.onrender.com/api/auth/login',
                 {
                     method: 'POST',
                     headers: {
@@ -345,12 +345,12 @@ function App() {
                         >
                         {item.image_url && (
                             <img
-                                src={`http://localhost:5000${item.image_url}`}
+                                src={`https://found-it-y7ck.onrender.com${item.image_url}`}
                                 alt={item.item_name}
                                 style={styles.itemImage}
                                 onClick={() =>
                                     setSelectedImage(
-                                        `http://localhost:5000${item.image_url}`
+                                        `https://found-it-y7ck.onrender.com${item.image_url}`
                                     )
                                 }
                             />

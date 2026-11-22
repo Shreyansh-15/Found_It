@@ -16,7 +16,7 @@ function ClaimForm({ itemId, onSubmitted }) {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/items/${itemId}/claims`,
+                `https://found-it-y7ck.onrender.com/api/items/${itemId}/claims`,
                 {
                     method: 'POST',
                     headers: {

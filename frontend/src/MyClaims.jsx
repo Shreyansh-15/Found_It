@@ -10,7 +10,7 @@ function MyClaims() {
 
             try {
                 const response = await fetch(
-                    'http://localhost:5000/api/my-claims',
+                    'https://found-it-y7ck.onrender.com/api/my-claims',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
