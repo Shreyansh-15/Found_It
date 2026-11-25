@@ -308,11 +308,11 @@ function ReportForm({ onCreated }) {
                                 )
                             }
                         >
-                            <option value="6">
+                            <option value="1">
                                 Kandoli Campus - Main Area
                             </option>
 
-                            <option value="5">
+                            <option value="2">
                                 Bidholi Campus - Main Area
                             </option>
                         </select>
