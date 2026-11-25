@@ -5,12 +5,20 @@ const jwt = require('jsonwebtoken');
 const pool = require('./db');
 
 const path = require('path');
+const fs = require('fs');
 const multer = require('multer');
 
+const uploadDirectory = path.join(__dirname, 'uploads');
+
+if (!fs.existsSync(uploadDirectory)) {
+    fs.mkdirSync(uploadDirectory, { recursive: true });
+}
+
 const app = express();
+
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
-        callback(null, path.join(__dirname, 'uploads'));
+        callback(null, uploadDirectory);
     },
 
     filename: (req, file, callback) => {
